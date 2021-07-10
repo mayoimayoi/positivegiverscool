@@ -1,0 +1,29 @@
+@import "./../base/variable";
+
+.service-contents {
+  padding-top: 60px;
+  h2 {
+    position: relative;
+    padding: 2px 0;
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      background: linear-gradient(to right, $aliceblue, transparent);
+    }
+  }
+  .service-contents__items {
+    @include flex();
+    .service-contents__items__img {
+      width: 30%;
+      transform: rotate(-5deg);
+    }
+    .service-contents__items__text {
+      width: 70%;
+      padding: 20px;
+      p {
+        padding-bottom: 10px;
+      }
+    }
+  }
+}

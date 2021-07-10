@@ -1,0 +1,40 @@
+@mixin flex() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flexdirection() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin container($maxwidth, $width) {
+  max-width: $maxwidth;
+  width: $width;
+  margin: 0 auto;
+}
+
+// レイアウト幅　式①
+$layout-width-inner: 1180px;
+$layout-width-smartphone: 767px;
+
+// ブレークポイント 式②
+$breakpoints: (
+  "sp": "screen and (max-width: #{$layout-width-smartphone})",
+  "tab": "screen and (max-width: #{$layout-width-inner - 1px})",
+  "pc": "screen and (min-width: #{$layout-width-inner})",
+);
+
+// メディアクエリー　式③
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+$aliceblue: #f0f8ff;
+$grayblue: #9b9cc2;
+$blue:#0000ff;
+$red:#ff4500;

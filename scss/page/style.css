@@ -1,0 +1,76 @@
+.top-container {
+  max-width: 1200px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.toptitle {
+  position: relative;
+}
+
+.toptitle img {
+  height: 500px;
+  width: 100%;
+}
+
+.toptitle .toptitle__text {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 160px);
+  text-align: center;
+  width: 320px;
+}
+
+.toptitle .toptitle__text h1 {
+  font-size: 36px;
+}
+
+.toptitle .toptitle__text .toptitle__link {
+  margin-top: 100px;
+  text-decoration: underline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.toptitle .toptitle__text .toptitle__link a {
+  color: #ff4500;
+}
+
+.news--box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  padding: 10px 0;
+}
+
+.news--box a {
+  color: #0000ff;
+  text-decoration: underline;
+  padding: 0 20px;
+}
+
+.news--box .news--box--tab {
+  color: #ff4500;
+  border: 2px #ff4500 solid;
+  border-radius: 8px;
+}
+/*# sourceMappingURL=style.css.map */

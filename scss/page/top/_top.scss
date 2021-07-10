@@ -1,0 +1,48 @@
+@import "./../../base/variable";
+
+.top-container {
+  @include container(1200px, 80%);
+}
+
+.toptitle {
+  position: relative;
+  img {
+    height: 500px;
+    width: 100%;
+  }
+  .toptitle__text {
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 160px);
+    text-align: center;
+    width: 320px;
+    h1 {
+      font-size: 36px;
+    }
+    .toptitle__link {
+      margin-top: 100px;
+      text-decoration: underline;
+      @include flex();
+      justify-content: space-between;
+      a {
+        color: $red;
+      }
+    }
+  }
+}
+
+.news--box {
+  @include flex();
+  justify-content: left;
+  padding: 10px 0;
+  a {
+    color: $blue;
+    text-decoration: underline;
+    padding: 0 20px;
+  }
+  .news--box--tab {
+    color: $red;
+    border: 2px $red solid;
+    border-radius: 8px;
+  }
+}
