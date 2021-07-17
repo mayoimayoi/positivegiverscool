@@ -1,0 +1,22 @@
+{
+  "name": "positivegiver",
+  "version": "1.0.0",
+  "description": "positivegivers become cool  システム概要図は以下のサイトで作成 https://app.diagrams.net/#",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mayoimayoi/positivegiverscool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mayoimayoi/positivegiverscool/issues"
+  },
+  "homepage": "https://github.com/mayoimayoi/positivegiverscool#readme",
+  "dependencies": {
+    "microcms-js-sdk": "^1.2.0"
+  }
+}

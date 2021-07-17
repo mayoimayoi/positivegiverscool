@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./../scss/style.css" />
+    <link rel="stylesheet" href="./../scss/page/style.css" />
+  </head>
+  <body>
+    <section class="service-contents" id="News">
+      <h2>News~活動記録~</h2>
+      <!-- 実際の活動記録はブログなどでできないかなと思う（DBが付かない間は） -->
+      <div class="news--box" id="news1"></div>
+      <div class="news--box" id="news2"></div>
+      <div class="news--box" id="news3"></div>
+    </section>
+    <script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
+    <script>
+      const { createClient } = microcms;
+      const client = createClient({
+        serviceDomain: "positivenews", // service-domain は XXXX.microcms.io の XXXX 部分
+        apiKey: "c2b2ea8d-03fe-41a3-8c9c-2f17b23cf1f6",
+      });
+      client
+        .get({
+          endpoint: "news",
+        })
+        .then((res) => {
+          //microcmsからとってきたデータをjqueryを使って追加する
+          for (let i = 0; i <= 2; i++) {
+            let idnum = i + 1;
+            let dateBefore = res.contents[i].day;
+            let date = new Date(dateBefore);
+            let creationday =
+              date.getFullYear() + "/" + date.getMonth() + "/" + date.getDay();
+            $(function () {
+              $("#news" + idnum).append("<p>" + creationday);
+              $("#news" + idnum).append("<a>" + res.contents[i].title);
+              $("#news" + idnum).append("<p>" + res.contents[i].tag);
+              $("#news" + idnum + " p:nth-child(3)").addClass("news--box--tab");
+            });
+          }
+        });
+    </script>
+  </body>
+</html>
