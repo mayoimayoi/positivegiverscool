@@ -4,6 +4,7 @@
   "description": "positivegivers become cool  システム概要図は以下のサイトで作成 https://app.diagrams.net/#",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
